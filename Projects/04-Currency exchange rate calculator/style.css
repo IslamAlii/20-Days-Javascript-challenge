@@ -1,0 +1,117 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --primary-color: #5fbaa7;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+  margin: 0 30px;
+}
+
+.btn {
+  color: white;
+  background-color: var(--primary-color);
+  font-size: 16px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+main .container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  text-align: center;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+}
+
+h1 {
+  color: var(--primary-color);
+  margin: 24px 0;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.currency-box,
+.swap-box {
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.currency-box select,
+.currency-box input {
+  background-color: transparent;
+  font-size: 16px;
+  padding: 10px;
+  border: 1px solid #dedede;
+  outline: none;
+}
+
+.currency-box select {
+  width: 75px;
+  margin-right: 20px;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%20000002%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-position: right 5px top 50%, 0, 0;
+  background-size: 12px auto, 100%;
+  background-repeat: no-repeat;
+}
+
+.currency-box input {
+  width: 300px;
+}
+
+.swap-box {
+  margin: 20px 0;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 25px;
+  }
+
+  .currency-box,
+  .swap-box {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .currency-box input {
+    width: 200px;
+  }
+}

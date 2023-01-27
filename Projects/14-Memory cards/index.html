@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Memory cards</title>
+  </head>
+  <body>
+    <header class="main-header">
+      <div class="container">
+        <button class="btn" id="clear">
+          <i class="fa-solid fa-trash btn-icon"></i>
+          Clear cards
+        </button>
+        <h1>Memory cards</h1>
+        <button class="btn btn-small" id="open">
+          <i class="fa-solid fa-plus btn-icon"></i>
+          Add card
+        </button>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div class="cards-box">
+          <!-- <div class="card active">
+            <div class="card-front">What is php?</div>
+            <div class="card-back">Programming language.</div>
+          </div>
+          <div class="card">
+            <div class="card-front">What is php?</div>
+            <div class="card-back">Programming language.</div>
+          </div> -->
+        </div>
+        <nav class="cards-nav">
+          <button class="btn btn-ghost" id="prev-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M10.5 19.5L3 12m0 0l7.5-7.5M3 12h18"
+              />
+            </svg>
+          </button>
+          <span class="cards-numbers">1 / 2</span>
+          <button class="btn btn-ghost" id="next-btn">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke-width="1.5"
+              stroke="currentColor"
+              class="btn-icon"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+              />
+            </svg>
+          </button>
+        </nav>
+      </div>
+    </main>
+
+    <section class="add-card-modal">
+      <div class="conatiner">
+        <header>
+          <h2>Add new card</h2>
+          <button class="btn btn-ghost" id="close">X</button>
+        </header>
+        <form>
+          <div class="form-group">
+            <label for="question">Question</label>
+            <textarea
+              id="question"
+              placeholder="Enter the question..."
+            ></textarea>
+          </div>
+          <div class="form-group">
+            <label for="answer">Answer</label>
+            <textarea id="answer" placeholder="Enter the answer..."></textarea>
+          </div>
+          <button class="btn" id="add">
+            <i class="fa-solid fa-plus btn-icon"></i>
+            Add Card
+          </button>
+        </form>
+      </div>
+    </section>
+    <script src="script.js"></script>
+  </body>
+</html>

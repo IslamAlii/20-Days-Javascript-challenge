@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Hangman game</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <h1>Hangman game</h1>
+        <p>Find the hidden word - Enter a letter</p>
+        <div class="game-container">
+          <svg width="200" height="250" class="figure-container">
+            <!-- Rod -->
+            <line x1="60" y1="20" x2="140" y2="20"></line>
+            <line x1="140" y1="20" x2="140" y2="50"></line>
+            <line x1="60" y1="20" x2="60" y2="240"></line>
+            <line x1="20" y1="240" x2="100" y2="240"></line>
+
+            <!-- Head -->
+            <circle cx="140" cy="70" r="20" class="figure-part"></circle>
+
+            <!-- Body -->
+            <line x1="140" y1="90" x2="140" y2="150" class="figure-part"></line>
+
+            <!-- Arms -->
+            <line
+              x1="140"
+              y1="120"
+              x2="120"
+              y2="100"
+              class="figure-part"
+            ></line>
+            <line
+              x1="140"
+              y1="120"
+              x2="160"
+              y2="100"
+              class="figure-part"
+            ></line>
+
+            <!-- Legs -->
+            <line
+              x1="140"
+              y1="150"
+              x2="120"
+              y2="180"
+              class="figure-part"
+            ></line>
+            <line
+              x1="140"
+              y1="150"
+              x2="160"
+              y2="180"
+              class="figure-part"
+            ></line>
+          </svg>
+          <div class="wrong-container"></div>
+
+          <div class="word-container"></div>
+        </div>
+      </div>
+    </main>
+
+    <div class="popup-meesage">
+      <div>
+        <h2 id="message">You have won</h2>
+        <button class="btn" id="popup-btn">Play again</button>
+      </div>
+    </div>
+
+    <div class="alert-message">
+      <p>You have already entered this letter</p>
+    </div>
+
+    <div class="small-screens-message">
+      Sorry we are not working on screens less than <strong>992px</strong>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

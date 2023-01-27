@@ -1,0 +1,115 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: white;
+  background-color: #040e27;
+  font-family: "Roboto", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+h1 {
+  color: #0181f5;
+  text-align: center;
+  margin: 30px 0;
+}
+
+main .container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2px;
+}
+
+main .container > div {
+  position: relative;
+}
+
+main .container > div img {
+  width: 100%;
+  height: 100%;
+}
+
+main .container > div .overlay {
+  width: 100%;
+  height: 100%;
+  background-color: #0181f5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.5s;
+}
+
+main .container > div .overlay:hover {
+  opacity: 0.9;
+}
+
+main .container > div .overlay .btn {
+  text-decoration: none;
+  color: white;
+  background-color: #040e27;
+  padding: 10px 20px;
+  transition: 0.5s;
+}
+
+main .container > div .overlay .btn:hover {
+  transform: scale(0.98);
+}
+
+footer .container {
+  font-size: 25px;
+  padding: 30px 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 15px;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  fill: white;
+  transition: 0.5s;
+}
+
+.icon:hover {
+  scale: 0.9;
+}
+
+@media (max-width: 992px) {
+  main .container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  main .container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  main .container {
+    grid-template-columns: 1fr;
+  }
+
+  .icon {
+    width: 24px;
+    height: 24px;
+  }
+}

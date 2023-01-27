@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Expense tracker</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <div>
+          <h1>Expense tracker</h1>
+          <div class="balance-box">
+            <h2>Total balance</h2>
+            <span class="total-blance" id="total-balance"></span>
+          </div>
+          <div class="balance-details">
+            <div>
+              <h4>Income</h4>
+              <span class="income" id="income"></span>
+            </div>
+            <div>
+              <h4>Expence</h4>
+              <span class="expense" id="expense"></span>
+            </div>
+          </div>
+          <div class="history">
+            <h3>History</h3>
+            <ul id="history-list"></ul>
+          </div>
+          <div class="add-new-transaction">
+            <h3>Add new transaction</h3>
+            <form action="#" class="transaction-form" id="transaction-form">
+              <div class="form-control">
+                <label for="text">Text</label>
+                <input type="text" placeholder="Enter text" id="text" />
+              </div>
+              <div class="form-control">
+                <label for="number"
+                  >Amount (negative - Expense, positive - income)</label
+                >
+                <input type="text" placeholder="Enter amout" id="amount" />
+              </div>
+              <button class="btn" id="submit-form-btn">Add transaction</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

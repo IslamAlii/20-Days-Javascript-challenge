@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Questrial&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Questrial", sans-serif;
+  background-color: #666;
+}
+
+.container {
+  margin: 0 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  color: #fff;
+  margin: 24px 0;
+}
+
+.screen {
+  width: 50%;
+  text-align: center;
+  margin-bottom: 24px;
+}
+
+.video {
+  width: 100%;
+  background-color: #000 !important;
+  cursor: pointer;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.video.fullscreen {
+  width: 100vw;
+  height: 95vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.video-utilites {
+  color: #fff;
+  background-color: #333;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  padding: 8px;
+  margin-top: -3px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.btn {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn-icon {
+  width: 24px;
+  height: 24px;
+  transition: 0.5s;
+}
+
+.btn-icon:hover {
+  transform: scale(1.2);
+}
+
+.btn-icon.hidden {
+  display: none;
+}
+
+.play-icon {
+  color: #28a745;
+}
+
+.pause-icon {
+  color: #fff;
+}
+
+.stop-icon {
+  color: #dc3545;
+}
+
+.time-stamp {
+  font-weight: bold;
+}
+
+@media (min-width: 1400px) {
+  .container {
+    width: 1400px;
+    margin: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .screen {
+    width: 100%;
+  }
+}

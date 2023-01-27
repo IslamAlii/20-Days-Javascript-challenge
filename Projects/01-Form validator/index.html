@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="test" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Form validator</title>
+  </head>
+  <body>
+    <main class="auth-main">
+      <div class="container">
+        <form action="#" class="auth-form">
+          <h2 class="form-heading">Registe now</h2>
+          <div class="form-control">
+            <label for="name">Full name</label>
+            <input
+              type="text"
+              id="name"
+              placeholder="John smith"
+              data-min="2"
+              data-max="50"
+            />
+            <small class="error-message">Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="email">Email</label>
+            <input
+              type="text"
+              id="email"
+              placeholder="example@gmail.com"
+              data-email="email"
+            />
+            <small class="error-message">Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              placeholder="Enter password"
+              data-password="password"
+            />
+            <small class="error-message">Error message</small>
+          </div>
+          <div class="form-control">
+            <label for="confirm-password">Confirm password</label>
+            <input
+              type="password"
+              id="confirm-password"
+              placeholder="Enter password again"
+              data-confirm-password="confirmPassword"
+            />
+            <small class="error-message">Error message</small>
+          </div>
+          <button class="btn" aria-label="Sign up button">Sign up</button>
+        </form>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>

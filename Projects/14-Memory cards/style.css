@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: white;
+  font-family: "Lato", sans-serif;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.main-header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px 10px;
+}
+
+.btn {
+  background-color: #fff;
+  font-size: 16px;
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.btn-small {
+  font-size: 14px;
+  padding: 5px 10px;
+}
+
+.btn-ghost {
+  background-color: transparent;
+  font-weight: bold;
+  border: none;
+}
+
+main {
+  margin-top: 30px;
+}
+
+main .container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.cards-box {
+  width: 500px;
+  max-width: 100%;
+  height: 300px;
+  position: relative;
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  transform: translateX(50%) rotateY(-10deg);
+  transform-style: preserve-3d;
+  transition: 0.3s ease-in-out;
+}
+
+.card.active {
+  opacity: 1;
+  cursor: pointer;
+  transform: translateX(0) rotateY(0);
+  z-index: 1;
+}
+
+.card.left {
+  transform: translateX(-50%) rotateY(10deg);
+}
+
+.card.show-answer {
+  transform: rotateX(180deg);
+}
+
+.card-front,
+.card-back {
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  backface-visibility: hidden;
+}
+
+.card-front::after,
+.card-back::after {
+  content: "\f021  Flip";
+  color: #ddd;
+  font-family: "Font Awesome 6 free", lato, sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.card-front {
+  transform: rotateX(0deg);
+  z-index: 2;
+}
+
+.card-back {
+  transform: rotateX(180deg);
+}
+
+.cards-nav {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.cards-numbers {
+  font-size: 20px;
+}
+
+.add-card-modal {
+  width: 70%;
+  background-color: #f0f0f0;
+  padding: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -1000px);
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 3;
+  transition: 0.3s;
+}
+
+.add-card-modal.active {
+  transform: translate(-50%, -50%);
+}
+
+.add-card-modal header {
+  margin-bottom: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.add-card-modal form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.form-group {
+  width: 100%;
+  display: grid;
+  gap: 10px;
+}
+
+textarea {
+  width: 100%;
+  height: 70px;
+  border: 1px solid #aaa;
+  padding: 10px;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  .add-card-modal {
+    width: 90%;
+  }
+}

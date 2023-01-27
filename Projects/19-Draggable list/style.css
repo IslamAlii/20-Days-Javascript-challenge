@@ -1,0 +1,89 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 90%;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.btn {
+  padding: 10px;
+  cursor: pointer;
+}
+
+h1 {
+  text-align: center;
+  margin: 20px 0;
+}
+
+main .draggable-form {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.draggable-list {
+  width: 100%;
+  list-style: none;
+  border: 1px solid #e3e5e4;
+}
+
+.draggable-list li {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid #e3e5e4;
+}
+
+.draggable-list li .draggable {
+  width: 85%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+}
+
+.draggable-list li.over .draggable {
+  background-color: #c3c7ca;
+}
+
+.draggable-list li.right .draggable p {
+  color: #3ae374;
+}
+
+.draggable-list li.wrong .draggable p {
+  color: #ff3838;
+}
+
+.draggable-list .number {
+  width: 10%;
+  color: #34444f;
+  background-color: #c3c7ca;
+  font-size: 18px;
+  font-weight: bold;
+  padding: 10px 15px;
+}
+
+.btn-check {
+  color: #34444f;
+  background-color: #c3c7ca;
+  font-size: 16px;
+  margin-top: 10px;
+  border: 1px solid #e3e5e4;
+}
+
+.btn-check:active {
+  transform: scale(0.98);
+}
+
+@media (max-width: 768px) {
+  main .draggable-form {
+    width: 100%;
+  }
+}

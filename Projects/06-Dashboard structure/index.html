@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Dashboard structure</title>
+  </head>
+  <body class="show-aside">
+    <header class="main-header">
+      <button class="btn-menu">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="btn-menu-icon"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
+          />
+        </svg>
+      </button>
+      <h1>My landing page</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+      <button class="btn" id="open-modal">Sign up</button>
+    </header>
+    <aside>
+      <div class="user-image">
+        <img
+          src="https://randomuser.me/api/portraits/men/76.jpg"
+          alt="User's image photo"
+        />
+      </div>
+      <nav>
+        <ul>
+          <li><a href="#">Link 1</a></li>
+          <li><a href="#">Link 2</a></li>
+          <li><a href="#">Link 3</a></li>
+          <li><a href="#">Link 4</a></li>
+          <li><a href="#">Link 5</a></li>
+        </ul>
+      </nav>
+    </aside>
+    <main>
+      <h2>What is the landing page about?</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Odit culpa
+        laboriosam accusantium nemo? Mollitia aut at atque sapiente eaque harum
+        earum, quae omnis neque accusantium fugit distinctio non eligendi
+        beatae. Quod consequatur consequuntur mollitia numquam veniam delectus
+        quam voluptatibus sint! Animi aliquid ratione dicta non? Eligendi, earum
+        mollitia ratione illum similique, officia atque incidunt laborum facere
+        corrupti vitae doloribus optio. Quos et accusantium provident quis
+        eveniet, reprehenderit quidem minima eligendi modi cumque facilis
+        placeat architecto dolore porro culpa neque necessitatibus maiores
+        temporibus id veritatis ipsum quae nam dolores! At, deleniti.
+      </p>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum
+        asperiores iure quisquam error sequi earum magni necessitatibus cumque.
+      </p>
+      <h2>Tell me more</h2>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequuntur
+        nobis pariatur, mollitia libero vel autem voluptates consectetur
+        incidunt hic voluptas quaerat qui voluptatibus placeat maiores,
+        repellendus totam aperiam nisi. Illo.
+      </p>
+      <h2>Benefits</h2>
+      <ul>
+        <li>Lifetime acces</li>
+        <li>30 day money back</li>
+        <li>Tailored customer support</li>
+      </ul>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
+        sapiente a minus quaerat, voluptatibus sunt, ipsam repudiandae
+        necessitatibus provident officia aut ea debitis, accusantium dolores
+        aliquid nesciunt? Fugiat, alias? Reiciendis? Officiis enim, magnam
+        libero est mollitia alias magni quos. Iste odio culpa blanditiis tempore
+        nulla accusamus, praesentium quidem illum mollitia optio obcaecati eos,
+        sit non incidunt nemo similique, dolores accusantium? Enim cum incidunt
+        molestiae ipsam culpa magnam, a dicta quam sequi expedita ducimus
+        nostrum explicabo perferendis tenetur aut odio provident recusandae!
+        Laudantium quia veritatis eum obcaecati nulla vel optio cupiditate?
+        Facilis nam quis ducimus temporibus excepturi vel saepe voluptatibus
+        earum incidunt mollitia modi laudantium exercitationem corrupti sunt hic
+        perferendis, aut tenetur ullam! Laboriosam suscipit possimus excepturi
+        modi quidem voluptatem ipsa.
+      </p>
+    </main>
+
+    <section class="modal">
+      <div class="modal-container">
+        <header>
+          <h2>Signup</h2>
+          <button class="btn-close-modal">X</button>
+        </header>
+
+        <main>
+          <h3>Register with us to get offers, support and more.</h3>
+          <form action="">
+            <div class="form-control">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="John Smith" />
+            </div>
+            <div class="form-control">
+              <label for="email">Email</label>
+              <input type="text" id="email" placeholder="example@gmail.com" />
+            </div>
+            <div class="form-control">
+              <label for="password">Password</label>
+              <input
+                type="text"
+                id="password"
+                placeholder="Enter yor password"
+              />
+            </div>
+            <div class="form-control">
+              <label for="confirm-password">confirm password</label>
+              <input
+                type="text"
+                id="confirm-password"
+                placeholder="Enter yor password again"
+              />
+            </div>
+            <button class="btn">Signup</button>
+          </form>
+        </main>
+      </div>
+      <div class="modal-overlay"></div>
+    </section>
+
+    <div class="small-screens-message">
+      Sorry we are not working on screens less than <strong>992px</strong>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Speach text reader</title>
+  </head>
+  <body>
+    <main>
+      <div class="container">
+        <header>
+          <h1>Speach text reader</h1>
+          <button class="btn btn-toogle" id="btn-toggle">
+            Toggle text box
+          </button>
+        </header>
+
+        <div class="boxes-container"></div>
+      </div>
+    </main>
+
+    <section class="text-box">
+      <header>
+        <h2>Choose voice</h2>
+        <button class="btn-close" id="btn-close">X</button>
+      </header>
+
+      <form class="text-form">
+        <select id="voice"></select>
+        <textarea id="textarea" placeholder="Enter text to read..."></textarea>
+        <button class="btn btn-read" id="btn-read">Read text</button>
+      </form>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
